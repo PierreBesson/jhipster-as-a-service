@@ -1,11 +1,22 @@
-# Build
+# Test
 
-gcloud builds submit --tag gcr.io/proven-serenity-238515/jhipster
+  curl -X POST -d "@jdl/blog.jh" https://jhipster-bzgjzhuyfa-uc.a.run.app -o app.zip
+
+# Development
+
+    docker build -t pbesson/jhipster-function:latest . 
+    PORT=8080 && docker run -p 8080:${PORT} -e PORT=${PORT} pbesson/jhipster-function:latest
+
+# Deployment on Google Cloud Run
+
+    gcloud components install beta
+    gcloud components update
+
+## Build
+
+    gcloud builds submit --tag gcr.io/proven-serenity-238515/jhipster
 
 # Deploy
 
-gcloud beta run deploy --image gcr.io/proven-serenity-238515/jhipster
+    gcloud beta run deploy --image gcr.io/proven-serenity-238515/jhipster
 
-# Call
-
-curl -X POST -d @application.jdl https://jhipster-bzgjzhuyfa-uc.a.run.app/
