@@ -1,6 +1,6 @@
 # Use the official Node.js 10 image.
 # https://hub.docker.com/_/node
-FROM node:10
+FROM jhipster/jhipster:v6.0.0-beta.0
 
 # Create and change to the app directory.
 WORKDIR /usr/src/app
