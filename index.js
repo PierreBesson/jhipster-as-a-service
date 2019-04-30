@@ -29,7 +29,7 @@ app.post('/', upload.array(), (req, res, next) => {
 
   // Generate the app from JDL
   console.log('Running jhipster import-jdl application.jdl...')
-  shelljs.exec('/usr/local/bin/jhipster import-jdl application.jdl --no-insight --skip-checks --skip-git --skip-install')
+  shelljs.exec('/usr/local/bin/jhipster import-jdl application.jdl --no-insight --skip-checks --skip-git --skip-install --interactive')
   console.log('Successfully generated app !')
 
   shelljs.exec('zip -r application.zip .');
