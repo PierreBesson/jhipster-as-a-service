@@ -4,8 +4,8 @@
 
 # Development
 
-    docker build -t pbesson/jhipster-function:latest . 
-    PORT=8080 && docker run -p 8080:${PORT} -e PORT=${PORT} pbesson/jhipster-function:latest
+    docker build -t pbesson/jhipster-as-a-service:latest . 
+    PORT=8080 && docker run -p 8080:${PORT} -e PORT=${PORT} pbesson/jhipster-as-a-service:latest
 
 # Deployment on Google Cloud Run
 
